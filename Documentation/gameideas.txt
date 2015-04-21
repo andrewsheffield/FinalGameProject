@@ -1,0 +1,59 @@
+This will be a long angle game which the player plays continuously until the player dies.  Once the player dies the player will be presented with upgrades they can buy with the money collected form killing enemy's.  The player will then be placed back into the same game but with new weapons, defenses or utility items to see if the player can move further.  The player will be given the illusion that the boat is moving to the right and trying to get somewhere.  As the boat boat moves further to the right the bad guys get harder and faster.
+
+The Boat:
+	The boat will be placed at the top of the screen.  Water will fill most of the screen below the boat.  The user can move left and right and will be able to shoot down.  The boat will be initialized with having no shielding or defenses, any touch will destory it.  The boat will also only have a single torpedo it can shoot at a time.
+
+Upgrades:
+	Weapons:
+		- Increasing the amount the boat can shoot
+		- Torpedo Speed
+		- Allow the user to control the torpedo direction
+		- Add mines as an available extra weapon
+	Defenses:
+		- Adding a hit shield which will absorbe impacts
+		- The Speed in which the shield recharges
+		- Adding boat health
+	Utility:
+		- Increasing boat speed
+		- Allowing the boat to teleport locations with a double tap of the arrow keys
+		- Increase the money gained from kills
+		- Increase the speed the player moves to the right
+
+Bad Guys:
+	Types:
+		- Monsters 
+			such as sharks or octopus that will attach from below and come up.  If these touch the boat the boat will take damage.
+		- Enemy craft
+			Such as submarines or underwater turrets that will shoot objects up towards the users boat
+		- Random Shit
+			Aliens or fun shit like that
+	Actions:
+		- Regardless of the users right movement speed the monsters will some from below or left to right under the user.
+		- They will increase in health, speed, damage, money and density as the user passes checkpoints.
+
+Final State:
+	Once the user has died and upgraded and repeated this until they are powerful enough to get to the end the user will meet the bad guy base.
+	Bad guy base will have tons of health and random shooting patterns etc.
+	Once the user kills the base the game is over
+
+
+Sprites Required:
+	- Users battle ship
+	- Transparent shield
+	- Explosion animation
+	- Torpedo
+	- Mines
+	- Enemy objects
+	- random fish / seaweed
+
+Sounds:
+	- Game music loop
+	- Torpedo shot
+	- Shield hit
+	- explosion
+	- motor sound
+
+Mechanics
+	- Boat movement and shoot mechanic
+	- Enemy AI
+	- fish and seaweed moving to the left to give the illusion of moving right.
