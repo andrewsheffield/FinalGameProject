@@ -10,6 +10,8 @@ var torpedo : GameObject;
 var torp_spawn : Transform;
 var fireRate : float;
 
+var explosion: GameObject;
+
 private var nextFire : float;
 
 function Start () {
@@ -40,4 +42,20 @@ function Update () {
         Instantiate(torpedo, torp_spawn.position, torp_spawn.rotation);
     }
 
+}
+
+function OnTriggerEnter2D(other : Collider2D) 
+{
+    if (other.tag == "Boundary")
+    {
+        return;
+    }
+    Destroy(other.gameObject);
+    Destroy(gameObject);
+    
+    Instantiate(explosion, transform.position, transform.rotation);
+    
+    Camera.main.GetComponent(camera_controller).Shake();
+    
+    game_control.score += 1;
 }

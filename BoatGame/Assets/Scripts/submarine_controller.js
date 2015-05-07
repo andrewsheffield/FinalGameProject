@@ -4,11 +4,11 @@ var speed : float;
 var explosion: GameObject;
 
 function Start() {
-	GetComponent.<Rigidbody2D>().velocity.x = -speed;
+	GetComponent.<Rigidbody2D>().velocity.x = speed;
 }
 
 function Update() {
-	if (transform.position.x < -3.68) {
+	if (transform.position.x > 3.68) {
 		Destroy(gameObject);
 	}
 }
@@ -19,6 +19,7 @@ function OnTriggerEnter2D(other : Collider2D)
     {
         return;
     }
+
     Destroy(other.gameObject);
     Destroy(gameObject);
     
