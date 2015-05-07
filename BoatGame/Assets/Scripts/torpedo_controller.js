@@ -4,6 +4,7 @@ var speed : float =  3;
 
 function Start () {
 	GetComponent.<Rigidbody2D>().velocity.y = -.5f;
+	GetComponent.<AudioSource>().Play();
 }
 
 function Update () {
