@@ -1,6 +1,7 @@
 ﻿#pragma strict
 
 var speed : float =  3;
+static var torp_damage : int = 1;
 
 function Start () {
 	GetComponent.<Rigidbody2D>().velocity.y = -.5f;

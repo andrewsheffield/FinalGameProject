@@ -6,11 +6,14 @@ var fireTorp : KeyCode;
 
 var speed = 5;
 
+var explosion: GameObject;
 var torpedo : GameObject;
 var torp_spawn : Transform;
-var fireRate : float;
 
-var explosion: GameObject;
+static var fireRate : float = 1;
+static var health: int = 1;
+
+
 
 private var nextFire : float;
 
@@ -38,7 +41,7 @@ function Update () {
 	//if space bar is pressed fire torpedo at fireRate
 	if (Input.GetKey(fireTorp) && Time.time > nextFire)
     {
-        nextFire = Time.time + fireRate;
+        nextFire = Time.time + 1/fireRate;
         Instantiate(torpedo, torp_spawn.position, torp_spawn.rotation);
     }
 
@@ -50,12 +53,22 @@ function OnTriggerEnter2D(other : Collider2D)
     {
         return;
     }
-    Destroy(other.gameObject);
-    Destroy(gameObject);
     
-    Instantiate(explosion, transform.position, transform.rotation);
+    if (health > 1) {
+    	Destroy(other.gameObject);
+    	Instantiate(explosion, transform.position, transform.rotation);
+    	Camera.main.GetComponent(camera_controller).Shake();
+    	health--;
+    } else {
     
-    Camera.main.GetComponent(camera_controller).Shake();
+	    Destroy(other.gameObject);
+	    Destroy(gameObject);
+	    
+	    Instantiate(explosion, transform.position, transform.rotation);
+	    
+	    Camera.main.GetComponent(camera_controller).Shake();
+	    
+	    Application.LoadLevel("Upgrades");
     
-    game_control.score += 1;
+    }
 }

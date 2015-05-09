@@ -22,7 +22,7 @@ function Update () {
 	if ( (transform.position.x + spriteWidth) <= cameraTransform.position.x ) {
 		Debug.Log("Moved!");
 		newPos = transform.position;
-  		newPos.x += 2.0f * spriteWidth * .998;
+  		newPos.x += 2.0f * spriteWidth * .9;
   		transform.position = newPos;
 	}
 }

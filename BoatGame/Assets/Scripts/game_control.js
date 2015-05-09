@@ -1,6 +1,5 @@
-﻿#pragma strict
+#pragma strict
 
-static var score : int = 0;
 static var money : int = 0;
 static var speed : float = .25f;
 static var distance : float = 0f;
@@ -8,8 +7,8 @@ static var distanceMultiplier: float = .25f;
 static var level : int = 1;
 
 var time : float;
-var scoreText : TextMesh;
-var scoreSave : int = 0;
+var moneyText : TextMesh;
+var moneySave : int = 0;
 
 var distanceText : TextMesh;
 
@@ -17,15 +16,18 @@ var levelText : TextMesh;
 
 function Start() {
 	GetComponent.<AudioSource>().Play();
+	distance = 0;
+	speed = .25f;
+	level = 1;
 }
 
 function Update () {
 	
 	time += Time.deltaTime;
 	
-	if (score != scoreSave) {
-		scoreSave = score;
-		scoreText.text = "Score: " + score;
+	if (money != moneySave) {
+		moneySave = money;
+		moneyText.text = "T-money: $" + money;
 	}
 	
 	//update distance

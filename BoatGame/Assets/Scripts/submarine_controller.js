@@ -1,10 +1,9 @@
 ﻿#pragma strict
 
-var speed : float;
 var explosion: GameObject;
 
 function Start() {
-	GetComponent.<Rigidbody2D>().velocity.x = speed;
+	GetComponent.<Rigidbody2D>().velocity.x = Random.Range(1f, 3f);
 }
 
 function Update() {
@@ -27,5 +26,5 @@ function OnTriggerEnter2D(other : Collider2D)
     
     Camera.main.GetComponent(camera_controller).Shake();
     
-    game_control.score += 1;
+    game_control.money += 1;
 }
