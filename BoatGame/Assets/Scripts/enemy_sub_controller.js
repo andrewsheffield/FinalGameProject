@@ -27,7 +27,9 @@ function Update() {
     }
 
 	if (transform.position.x > 3.00) {
-		GetComponent.<Rigidbody2D>().velocity.x *= -1;
+		if(speed>0){
+			GetComponent.<Rigidbody2D>().velocity.x *= -1;
+		}
 	}
     
     if (Time.time > nextFire)
