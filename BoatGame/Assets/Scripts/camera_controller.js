@@ -4,6 +4,11 @@ var originRotation:Quaternion;
 var shake_decay: float;
 var shake_intensity: float;
 var shook : int = 0;
+
+function Start() {
+	originPosition = transform.position;
+  	originRotation = transform.rotation;
+}
  
 function Update(){
    if(shake_intensity > 0){
@@ -25,8 +30,6 @@ function Update(){
 }
 
 function Shake() {
-	originPosition = transform.position;
-  	originRotation = transform.rotation;
    	shake_intensity = .1;
    	shake_decay = 0.005;
 }
