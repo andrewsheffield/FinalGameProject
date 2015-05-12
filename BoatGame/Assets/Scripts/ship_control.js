@@ -72,13 +72,21 @@ function OnTriggerEnter2D(other : Collider2D)
     } else {
     
 	    Destroy(other.gameObject);
-	    Destroy(gameObject);
+	    health--;
+	    GetComponent.<Renderer>().enabled = false;
 	    
 	    Instantiate(explosion, transform.position, transform.rotation);
 	    
 	    Camera.main.GetComponent(camera_controller).Shake();
-	    
-	    Application.LoadLevel("Upgrades");
+	   	
+		loadUpgrades();
     
     }
 }
+
+function loadUpgrades() {
+	yield WaitForSeconds(2);
+	Application.LoadLevel("Upgrades");
+}
+
+

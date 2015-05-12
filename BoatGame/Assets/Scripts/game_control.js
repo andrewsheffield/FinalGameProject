@@ -1,10 +1,10 @@
 #pragma strict
 
-static var money : int = 1000000;
+static var money : int = 0;
 static var speed : float = .25f;
 static var distance : float = 0f;
 static var distanceMultiplier: float = .25f;
-static var level : int = 1;
+static var level : int;
 
 var time : float;
 var moneyText : TextMesh;
@@ -51,6 +51,6 @@ function Update () {
 
 function incLevel() {
 	level ++;
-	speed *= level * .5;
+	speed *= level;
 	levelText.text = "Level: " + level;
 }
