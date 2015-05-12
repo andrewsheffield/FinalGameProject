@@ -1,6 +1,6 @@
 #pragma strict
 
-static var money : int = 1000;
+static var money : int = 100000;
 static var speed : float = .25f;
 static var distance : float = 0f;
 static var distanceMultiplier: float = .25f;
@@ -51,6 +51,6 @@ function Update () {
 
 function incLevel() {
 	level ++;
-	speed *= level;
+	speed *= level * .5;
 	levelText.text = "Level: " + level;
 }

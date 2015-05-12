@@ -1,13 +1,13 @@
 ﻿#pragma strict
 
 static var health : int = 1;
-var healthLevel : int = 1;
+static var healthLevel : int = 1;
 
 static var damage : int = 1;
-var damageLevel : int = 1;
+static var damageLevel : int = 1;
 
 static var fireRate : int = 1;
-var fireRateLevel : int = 1;
+static var fireRateLevel : int = 1;
 
 
 
@@ -28,6 +28,10 @@ function Start() {
 	healthText.text = health.ToString();
 	damageText.text = damage.ToString();
 	fireRateText.text = fireRate.ToString();
+	
+	healthButton.GetComponentInChildren.<UI.Text>().text = "$" + (200 * healthLevel);
+	damageButton.GetComponentInChildren.<UI.Text>().text = "$" + (200 * damageLevel);
+	fireRateButton.GetComponentInChildren.<UI.Text>().text = "$" + (200 * fireRateLevel);
 	
 }
 

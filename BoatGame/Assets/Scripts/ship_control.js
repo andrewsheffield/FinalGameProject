@@ -41,7 +41,7 @@ function Update () {
 	//if space bar is pressed fire torpedo at fireRate
 	if (Input.GetKey(fireTorp) && Time.time > nextFire)
     {
-        nextFire = Time.time + 1/fireRate;
+        nextFire = Time.time + 2.5 - (fireRate * .4);
         Instantiate(torpedo, torp_spawn.position, torp_spawn.rotation);
     }
 
