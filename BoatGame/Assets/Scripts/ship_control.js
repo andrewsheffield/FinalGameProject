@@ -13,11 +13,15 @@ var torp_spawn : Transform;
 static var fireRate : float = 1;
 static var health: int = 1;
 
+var naturalPos : Vector3;
+
 
 
 private var nextFire : float;
 
 function Start () {
+
+	naturalPos= transform.position;
 
 }
 
@@ -43,6 +47,12 @@ function Update () {
     {
         nextFire = Time.time + 2.5 - (fireRate * .4);
         Instantiate(torpedo, torp_spawn.position, torp_spawn.rotation);
+    }
+    
+    if (transform.position.y > naturalPos.y) {
+    	GetComponent.<Rigidbody2D>().velocity.y = -speed;
+    } else {
+    	GetComponent.<Rigidbody2D>().velocity.y = 0;
     }
 
 }
