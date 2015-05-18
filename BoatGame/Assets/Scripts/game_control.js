@@ -20,6 +20,12 @@ function Start() {
 	distance = 0;
 	speed = .25f;
 	level = 1;
+	
+	background_controller.backgroundStop = false;
+	game_control.distanceStop = false;
+	spawn_subs.spawnStop = false;
+	krakenScript.krakenStarted = false;
+	inkBallLauncherScript.shootInk = false;
 }
 
 function Update () {
@@ -37,16 +43,20 @@ function Update () {
 		distanceText.text = "Distance: " + Mathf.Floor(distance) + "m";
 	}
 	
-	if (Mathf.Floor(distance) == 100 && level != 2) {
+	if (Mathf.Floor(distance) == 100 && level < 2) {
 		incLevel();
 	}
-	else if (Mathf.Floor(distance) == 300 && level != 3) {
+	else if (Mathf.Floor(distance) == 300 && level < 3) {
 		incLevel();
 	}
-	else if (Mathf.Floor(distance) == 900 && level != 4) {
+	else if (Mathf.Floor(distance) == 900 && level < 4) {
 		incLevel();
 	}
-	else if (Mathf.Floor(distance) == 2700 && level != 5) {
+	else if (Mathf.Floor(distance) == 2700 && level < 5) {
+		incLevel();
+	}
+	
+	if ( Input.GetKeyDown('l') ) {
 		incLevel();
 	}
 	

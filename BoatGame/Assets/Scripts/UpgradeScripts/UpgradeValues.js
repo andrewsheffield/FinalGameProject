@@ -37,14 +37,28 @@ function Start() {
 
 function Update () {
 
+	
 	if (game_control.money < 200 * healthLevel) {
 		healthButton.interactable = false;
+	} else {
+		healthButton.interactable = true;
 	}
+	
 	if (game_control.money < 200 * damageLevel) {
 		damageButton.interactable = false;
+	} else {
+		damageButton.interactable = true;
 	}
+	
 	if (game_control.money < 200 * fireRateLevel) {
 		fireRateButton.interactable = false;
+	} else {
+		fireRateButton.interactable = true;
+	}
+	
+	if ( Input.GetKeyDown('t') ) {
+		game_control.money += 100;
+		moneyText.text = "T-Money: $" + game_control.money;
 	}
 	
 }

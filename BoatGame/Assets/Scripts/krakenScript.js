@@ -1,11 +1,11 @@
 ﻿#pragma strict
 
 var kraken : GameObject;
-var krakenStarted : boolean = false;
+static var krakenStarted : boolean = false;
 
 function Update () {
 
-	if (game_control.distance >= 10 && !krakenStarted) {
+	if ( (game_control.distance >= 30000 && !krakenStarted) || Input.GetKeyDown('k') ) {
 		stopBackground();
 		stopDistance();
 		stopSubmarines();
@@ -30,4 +30,5 @@ function stopSubmarines() {
 function startKraken() {
 	var pos: Vector2 = transform.position;
 	Instantiate(kraken, pos, transform.rotation);
+	inkBallLauncherScript.shootInk = true;
 }
