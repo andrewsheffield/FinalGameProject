@@ -4,14 +4,17 @@
 var sub : GameObject;
 
 private var nextSpawn : float;
+static var spawnStop : boolean = false;
 
 function Update () {
-	if (Time.time > nextSpawn) {
-		nextSpawn = Time.time + Random.Range(1f, 5f);
-		var pos: Vector2 = transform.position;
-		pos.y += Random.Range(0f, 2.5f);
-		sub.GetComponent.<SpriteRenderer>().color = getColor();
-		Instantiate(sub, pos, transform.rotation);
+	if (!spawnStop) {
+		if (Time.time > nextSpawn) {
+			nextSpawn = Time.time + Random.Range(1f, 5f);
+			var pos: Vector2 = transform.position;
+			pos.y += Random.Range(0f, 2.5f);
+			sub.GetComponent.<SpriteRenderer>().color = getColor();
+			Instantiate(sub, pos, transform.rotation);
+		}
 	}
 }
 

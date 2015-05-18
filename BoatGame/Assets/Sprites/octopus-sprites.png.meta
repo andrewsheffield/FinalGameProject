@@ -1,9 +1,32 @@
 fileFormatVersion: 2
 guid: 1410dc08386504ba0a756c3e46b8b1bd
-timeCreated: 1431393770
+timeCreated: 1431847992
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: octopus-sprites_0
+    21300002: octopus-sprites_1
+    21300004: octopus-sprites_2
+    21300006: octopus-sprites_3
+    21300008: octopus-sprites_4
+    21300010: octopus-sprites_5
+    21300012: octopus-sprites_6
+    21300014: octopus-sprites_7
+    21300016: octopus-sprites_8
+    21300018: octopus-sprites_9
+    21300020: octopus-sprites_10
+    21300022: octopus-sprites_11
+    21300024: octopus-sprites_12
+    21300026: octopus-sprites_13
+    21300028: octopus-sprites_14
+    21300030: octopus-sprites_15
+    21300032: octopus-sprites_19
+    21300034: octopus-sprites_24
+    21300036: octopus-sprites_26
+    21300038: octopus-sprites_31
+    21300040: octopus-sprites_32
+    21300042: octopus-sprites_33
+    21300044: octopus-sprites_34
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,14 +53,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +71,207 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: octopus-sprites_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 637
+        width: 124
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 637
+        width: 123
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 638
+        width: 118
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_3
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 637
+        width: 123
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 496
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 354
+        width: 130
+        height: 122
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_6
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 355
+        width: 103
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_7
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 355
+        width: 212
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_8
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 355
+        width: 204
+        height: 73
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_9
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 355
+        width: 198
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_10
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 355
+        width: 195
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_11
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 261
+        width: 145
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_12
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 260
+        width: 121
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_13
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 260
+        width: 119
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_14
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 260
+        width: 117
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_15
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 260
+        width: 117
+        height: 73
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_24
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 104
+        width: 128
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_26
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 85
+        width: 236
+        height: 154
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_31
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 75
+        width: 274
+        height: 166
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: octopus-sprites_32
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 96
+        width: 233
+        height: 133
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

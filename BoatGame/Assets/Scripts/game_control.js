@@ -5,6 +5,7 @@ static var speed : float = .25f;
 static var distance : float = 0f;
 static var distanceMultiplier: float = .25f;
 static var level : int;
+static var distanceStop : boolean = false;
 
 var time : float;
 var moneyText : TextMesh;
@@ -31,8 +32,10 @@ function Update () {
 	}
 	
 	//update distance
-	distance += speed * distanceMultiplier;
-	distanceText.text = "Distance: " + Mathf.Floor(distance) + "m";
+	if (!distanceStop) {
+		distance += speed * distanceMultiplier;
+		distanceText.text = "Distance: " + Mathf.Floor(distance) + "m";
+	}
 	
 	if (Mathf.Floor(distance) == 100 && level != 2) {
 		incLevel();
